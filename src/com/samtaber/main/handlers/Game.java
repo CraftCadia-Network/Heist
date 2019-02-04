@@ -27,7 +27,7 @@ public class Game {
 		
 	}
 	
-	public static void stop() {
+	public static void stop(Team team) {
 		hasStarted = false;
 	}
 	
