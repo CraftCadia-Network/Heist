@@ -15,12 +15,14 @@ public class Main extends JavaPlugin{
 	public static ItemStack SecurityBaton = new ItemStack(Material.STICK);
 	public static ItemMeta lmeta = SecurityBaton.getItemMeta();
 	FileHandler FileHandler = new FileHandler();
+	com.tabergames.events.OnJoin PlayerJoin = new com.tabergames.events.OnJoin();
 	
 	@Override
 	public void onEnable() {
 		
 		instance = this;
 		FileHandler.Setup();
+		this.getServer().getPluginManager().registerEvents(PlayerJoin, this);
 		this.getCommand("team").setExecutor((CommandExecutor)new TeamChoose());
 		
 	}
