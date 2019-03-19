@@ -26,7 +26,7 @@
 		}
 	}
 	
-	public static boolean setRank(Player p, int rank) {
+	public static boolean setRank(Player p, String rank) {
 		
 		File f = new File("plugins/Heist/PlayerData/" + p.getUniqueId() + ".yml");
 		YamlConfiguration yml = YamlConfiguration.loadConfiguration(f);
@@ -45,6 +45,6 @@
 		
 		File f = new File("plugins/Heist/PlayerData/" + p.getUniqueId() + ".yml");
 		YamlConfiguration yml = YamlConfiguration.loadConfiguration(f);
-		return yml.getInt("Rank");
+		return yml.getString ("Rank");
 	}
 	
