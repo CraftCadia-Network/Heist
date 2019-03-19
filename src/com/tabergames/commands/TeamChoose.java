@@ -36,12 +36,13 @@ public class TeamChoose implements CommandExecutor{
 						Main.lmeta.setDisplayName(TeamName.teamSecurity);
 						Main.SecurityBaton.setItemMeta(Main.lmeta);
 						i.addItem(Main.SecurityBaton);
-						PlayerHandler.setRank(player, teamName);
+						PlayerHandler.setRank(player, TeamName.securityDepend);
 						player.sendMessage(ChatColor.GREEN + "You have chosen the team color of " + ChatColor.BLUE + "Security");
 					
 				}else if(teamName.equalsIgnoreCase("Robbers")) {
 					
 					Main.lmeta.setDisplayName(TeamName.teamRobbers);
+					PlayerHandler.setRank(player, TeamName.robbersDepend);
 					player.sendMessage(ChatColor.GREEN + "You have chosen the team color of " + ChatColor.RED + "Robbers");
 				
 			}		
