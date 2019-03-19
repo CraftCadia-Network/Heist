@@ -20,7 +20,7 @@ public class Main extends JavaPlugin{
 	public void onEnable() {
 		
 		instance = this;
-		
+		FileHandler.Setup();
 		this.getCommand("team").setExecutor((CommandExecutor)new TeamChoose());
 		
 	}
