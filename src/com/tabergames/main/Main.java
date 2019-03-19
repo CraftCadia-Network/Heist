@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
+import com.tabergames.util.FileHandler;
 
 import com.tabergames.commands.TeamChoose;
 
@@ -13,6 +14,7 @@ public class Main extends JavaPlugin{
 	public static Main instance;
 	public static ItemStack SecurityBaton = new ItemStack(Material.STICK);
 	public static ItemMeta lmeta = SecurityBaton.getItemMeta();
+	FileHandler FileHandler = new FileHandler();
 	
 	@Override
 	public void onEnable() {
