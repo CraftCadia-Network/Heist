@@ -45,6 +45,6 @@
 		
 		File f = new File("plugins/Heist/PlayerData/" + p.getUniqueId() + ".yml");
 		YamlConfiguration yml = YamlConfiguration.loadConfiguration(f);
-		return yml.getString ("Rank");
+		return yml.getString("Rank");
 	}
 	
